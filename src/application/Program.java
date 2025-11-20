@@ -14,9 +14,12 @@ public class Program {
         ArchiveManipulation archiveMan = new ArchiveManipulation();
 
         System.out.println("Please enter the path of the .csv file: ");
-        archiveMan.readFile(new File(sc.nextLine()));
+
+        File path = new File(sc.nextLine());
+
+        archiveMan.readFile(path);
+        archiveMan.writeFile(path);
 
         sc.close();
     }
-
 }
